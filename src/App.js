@@ -84,7 +84,10 @@ const App = () => {
 
     return newItems.map((item) => (
       <li key={item.id} className="list-group-item d-flex justify-content-between align-item-center">
-        <span className={`todo-title mr-2 ${viewCompleted ? 'completed-todo' : ''}`}>{item.title}</span>
+        <div>
+          <span className={`todo-title mr-2 fw-bold ${viewCompleted ? 'completed-todo' : ''}`}>{item.title}</span>
+          <p className={`todo-title mr-2 ${viewCompleted ? 'completed-todo' : ''}`}>{item.description}</p>
+        </div>
         <span>
           <button className="btn btn-info mx-2" onClick={() => editItem(item)}>
             Edit
